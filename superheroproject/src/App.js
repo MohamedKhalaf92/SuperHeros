@@ -21,7 +21,7 @@ function App() {
         const response = await fetch(url, options);
         const result = await response.json();
         setSuperHeroStats(result);
-        console.log(result);
+        console.log(superHeroStats);
         return result;
       } catch (error) {
         console.error(error);
@@ -38,7 +38,7 @@ function App() {
         </Routes>
       </BrowserRouter>
       <SuperHeroSelector superHeroStats={superHeroStats}/>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
